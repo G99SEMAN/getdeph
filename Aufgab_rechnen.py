@@ -1,0 +1,5 @@
+a = eval(input("Was ist 1+1? :"))
+b = eval(input("Was ist 1+2? :"))
+c = eval(input("Was ist 1+3? :"))
+d = eval(input("Was ist 1+4? :"))
+e = eval(input("Was ist 1+5? :"))
