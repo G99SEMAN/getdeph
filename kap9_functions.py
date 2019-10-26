@@ -53,12 +53,19 @@
 
 
 
+import functions
+# formel = functions.formel           ##wenn mann den Pfad einmal eingegeben hat muss  man ihn nicht immer vor die Funktion schreiben siehe unten
+# eingabe = eval(input("Bitte eine Zahl eingeben: "))
+# #print(functions.formel(eingabe))
+# print(formel(eingabe))
 
-def formel (x):
-    if 2*x*x+4*x+9 < 50:
-        return 2*x*x+4*x+9
-    else:
-        return 3*x*x+2*x-7
 
-eingabe = eval(input("Bitte eine Zahl eingeben: "))
-print(formel(eingabe))
+
+
+
+#######Aufgabe 1
+schritte = functions.zweierschritte
+
+z1 = eval(input("Zahl1: "))
+z2 = eval(input("Zahl2: "))
+schritte(z1, z2)

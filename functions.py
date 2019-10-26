@@ -4,5 +4,11 @@ def formel (x):
     else:
         return 3*x*x+2*x-7
 
-eingabe = eval(input("Bitte eine Zahl eingeben: "))
-print(formel(eingabe))
+
+def zweierschritte(z1, z2):
+    if z1 < z2:
+        for i in range(z1, z2+1, 2):
+            print(i)
+    else:
+        for i in range(z1, z2-1, -2):
+            print(i)
