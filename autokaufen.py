@@ -37,7 +37,7 @@ dict_car3 = {"marke": "KIA", "model": "Vito", "preis": 1890, "km": 133000}
 print(type(dict_car1["preis"]))
 max_preis = eval(input("Bitte geben Sie ihr maximales Budget ein: "))
 # i = 0
-# for  i in Dict_cars[i]["preis"]:
+ for i in Dict_cars:
 #     if max_preis > Dict_cars[i]["preis"]:
 #         print(Dict_cars[i]["marke"], Dict_cars[i]["model"], "ist im Budget!")
 #     else:
