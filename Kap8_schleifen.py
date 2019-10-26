@@ -39,13 +39,45 @@
 #     print("Die die Zahl", wert, "befindet sich nicht in der Liste!")
 
 
+#
+# liste = [12, 18, 3, 6, 0, 46, 234, 23]
+#
+# wert = eval(input("Welcher wert soll dividiert werden?"))
+# for n in liste:
+#     print(n)
+#     if n == 0:
+#         print("Fehler Zahlen dürfen nicht durch 0 geteilt werden")
+#         continue
+#     print(wert/n)
 
-liste = [12, 18, 3, 6, 0, 46, 234, 23]
+#####aufgabe1
+#
+# for i in range(1, 10):
+#     print("QW von", i, "=", i*i)
+# n=1
+# while n <=10:
+#     print("QW von", n, "=", n*n)
+#     n+=1
 
-wert = eval(input("Welcher wert soll dividiert werden?"))
-for n in liste:
-    print(n)
-    if n == 0:
-        print("Fehler Zahlen dürfen nicht durch 0 geteilt werden")
-        continue
-    print(wert/n)
+#####aufgabe 2
+# staedte=['köln', "frankfurt", "kassel", "bechen", "frechen", "hamburg", "trier", "mainz", "dortmund", "münchen"]
+# print(len(staedte))
+# for i in staedte:
+#     print(i)
+#
+# n=0
+# while n<len(staedte):
+#     print(staedte[n])
+#     n+=1
+
+
+######Aufgabe 3
+
+
+while True:
+    zahl = eval(input("Geben Sie eine Zahl ein welche verdoppelt werden soll: "))
+    print(zahl*2)
+    ja = input("wollen sie nochmal? ja/nein")
+    if ja != "ja":
+        break
+print("ENDE!")
