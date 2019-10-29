@@ -69,3 +69,4 @@ schritte = functions.zweierschritte
 z1 = eval(input("Zahl1: "))
 z2 = eval(input("Zahl2: "))
 schritte(z1, z2)
+print('hallo')
