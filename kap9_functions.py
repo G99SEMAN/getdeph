@@ -53,7 +53,7 @@
 
 
 
-import functions
+#import functions
 # formel = functions.formel           ##wenn mann den Pfad einmal eingegeben hat muss  man ihn nicht immer vor die Funktion schreiben siehe unten
 # eingabe = eval(input("Bitte eine Zahl eingeben: "))
 # #print(functions.formel(eingabe))
@@ -64,9 +64,21 @@ import functions
 
 
 #######Aufgabe 1
-schritte = functions.zweierschritte
+# schritte = functions.zweierschritte
+#
+# z1 = eval(input("Zahl1: "))
+# z2 = eval(input("Zahl2: "))
+# schritte(z1, z2)
+# print('hallo')
+#
+#
 
-z1 = eval(input("Zahl1: "))
-z2 = eval(input("Zahl2: "))
-schritte(z1, z2)
-print('hallo')
+#Aufgabe 2
+
+import functions
+pwcheck =functions.pwcheck
+
+user = input("Benutername: ")
+pw = input("Passwort: ")
+
+pwcheck(user, pw)
