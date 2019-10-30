@@ -76,9 +76,9 @@
 #Aufgabe 2
 
 import functions
-pwcheck =functions.pwcheck
+pwcheck =functions.registrarion
 
-user = input("Benutername: ")
-pw = input("Passwort: ")
+username = input("Benutername: ")
+password = input("Passwort: ")
 
-pwcheck(user, pw)
+pwcheck(username, password)
