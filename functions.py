@@ -22,3 +22,7 @@ def registrarion(username, password):       #Kapitel 9
 
     print("Nutzername oder Passwort falsch!")
     return False
+
+
+def nameage(name, age):
+    print("hello", name, "you are", age, "years old!")
