@@ -1,3 +1,6 @@
+import time, random
+
+
 def formel (x):
     if 2*x*x+4*x+9 < 50:
         return 2*x*x+4*x+9
@@ -28,12 +31,12 @@ def nameage(name, age):
     print("hello", name, "you are", age, "years old!")
 
 
-import random
+
 
 def wuerfeln():
     return random.randint(1, 6)
 
-import time
+
 
 def datum():
     return time.strftime("%d.%m.%Y")
