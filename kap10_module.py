@@ -1,4 +1,4 @@
-import math
+import math, functions
 
 # x = eval(input("Geben Sie eine Zahl ein, deren Logarythmus Sie berechnen wollen: "))
 # basis = eval(input("Geben Sie die Basis ein: "))
@@ -10,7 +10,11 @@ import math
 
 
 
-####  Aufgabe 1
-import functions
-wuerfeln = functions.wuerfeln
-print("Kevin hat eine %d gewürfelt!" %(wuerfeln()))
+# ####  Aufgabe 1
+
+# wuerfeln = functions.wuerfeln
+# print("Kevin hat eine %d gewürfelt!" %(wuerfeln()))
+
+####### Aufgabe 2
+print("Datum:", functions.datum())
+print("Uhrzeit:", functions.zeit())

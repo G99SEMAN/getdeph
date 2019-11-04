@@ -32,3 +32,10 @@ import random
 
 def wuerfeln():
     return random.randint(1, 6)
+
+import time
+
+def datum():
+    return time.strftime("%d.%m.%Y")
+def zeit():
+    return time.strftime("%H:%M:%S")
