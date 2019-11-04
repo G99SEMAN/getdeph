@@ -26,3 +26,9 @@ def registrarion(username, password):       #Kapitel 9
 
 def nameage(name, age):
     print("hello", name, "you are", age, "years old!")
+
+
+import random
+
+def wuerfeln():
+    return random.randint(1, 6)
