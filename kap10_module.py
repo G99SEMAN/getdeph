@@ -11,8 +11,6 @@ import math
 
 
 ####  Aufgabe 1
-import random, functions
-
-
-
-print("Ergebnis: ", wuerfeln())
+import functions
+wuerfeln = functions.wuerfeln
+print("Kevin hat eine %d gewürfelt!" %(wuerfeln()))
