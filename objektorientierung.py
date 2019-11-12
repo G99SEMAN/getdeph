@@ -2,6 +2,7 @@ class Auto:
     """
     Erstellt das Objekt Auto für einen Gebrauchtwagenhändler.
     """
+    anzahl=0
     def __init__(self, ma, mo, bj, pr):
         """
         Initialisiert ein neues Objekt Auto
@@ -17,6 +18,8 @@ class Auto:
         self.__Modell = mo
         self.__Baujahr = bj
         self.__Preis = pr
+
+        Auto.anzahl +=1
 
     def getMarke(self):
         """
@@ -53,13 +56,58 @@ class Auto:
             if bestaetigung == "ja":
                 self.__Preis = preis_neu
 
+    def __del__(self):
+        """
+        Löscht das Objekt Auto.
+        """
+        Auto.anzahl -=1
+        print("Auto wurde gelöscht")
+        print("Es sind noch %d Autos verfügbar"%Auto.anzahl)
+
+class SUV(Auto):
+    """
+    Erstellt das Objekt SUV: abgeleitet von der Kasse Auto.
+    """
+    def __init__(self, ma, mo, bj, pr, allrad):
+        """
+        Initialisiert ein neues Objekt SUV
+
+        Argumente:
+        *Marke (string): Marke des Gebrauchtwagens
+        *Modell (string): Modell des Gebrauchtwagens
+        *Baujahr (int): Baujahr des Fahrzeugs
+        *Preis (int): Angestrebter Verkaufspreis
+        *Allradantrieb (bool): Alrad vorhanden?
+        """
+        Auto.__init__(self, ma, mo, bj, pr)
+        self.__Allradantrieb = allrad
+
+    def getAllradamtrieb(self):
+        """
+        Gibt an, ob ein Allradantrieb vorhanden ist.
+        """
+        return self.__Allradantrieb
 
 
-auto1 = Auto("VW", "Golf", 2011, 5000)
-auto2 = Auto("Renault", "Clio", 2013, 6000)
-auto3 = Auto("Posche", "Panamera", 2014, 25000)
 
-wert = eval(input("Geben Sie einen neuen Preis ein: "))
-auto1.setPreis(wert)
 
-print("Neuer Preis:",auto1.getPreis())
+suv1 = SUV("Mercedes Benz", "M63 AMG", 2017, 42000, True)
+print(suv1.getAllradantrieb())
+print(suv1.getMarke())
+
+
+# print(Auto.anzahl)
+# auto1 = Auto("VW", "Golf", 2011, 5000)
+# print(Auto.anzahl, auto1.anzahl)
+# auto2 = Auto("Renault", "Clio", 2013, 6000)
+# print(Auto.anzahl, auto1.anzahl, auto2.anzahl)
+# auto3 = Auto("Posche", "Panamera", 2014, 25000)
+# print(Auto.anzahl, auto1.anzahl, auto2.anzahl, auto3.anzahl)
+
+#del auto1      #löscht auch alle anderen Autos
+#print(Auto.anzahl, auto2.anzahl, auto3.anzahl)
+
+# wert = eval(input("Geben Sie einen neuen Preis ein: "))
+# auto1.setPreis(wert)
+#
+# print("Neuer Preis:",auto1.getPreis())
