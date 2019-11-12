@@ -1,4 +1,4 @@
-import time, random
+import time, random,
 
 
 def formel (x):
