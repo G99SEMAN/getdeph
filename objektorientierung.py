@@ -45,7 +45,7 @@ class Auto:
         """
         Ändert den Preis des Fahrzeugs
         """
-        if abs(self.__Preis - preis_neu) < self.__Preis *0.05:
+        if abs(self.__Preis - preis_neu) < self.__Preis *0.05:                  #abs sorgt dafür dass ein - als Vorzeichen keine Auswirkung hat
             self.__Preis = preis_neu
         else:
             print("Die Abweichung zum vorherigen Preis ist sehr groß.")
