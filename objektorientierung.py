@@ -56,13 +56,13 @@ class Auto:
             if bestaetigung == "ja":
                 self.__Preis = preis_neu
 
-    def __del__(self):
-        """
-        Löscht das Objekt Auto.
-        """
-        Auto.anzahl -=1
-        print("Auto wurde gelöscht")
-        print("Es sind noch %d Autos verfügbar"%Auto.anzahl)
+    # def __del__(self):
+    #     """
+    #     Löscht das Objekt Auto.
+    #     """
+    #     Auto.anzahl -=1
+    #     print("Auto wurde gelöscht")
+    #     print("Es sind noch %d Autos verfügbar"%Auto.anzahl)
 
 class SUV(Auto):
     """
@@ -82,7 +82,7 @@ class SUV(Auto):
         Auto.__init__(self, ma, mo, bj, pr)
         self.__Allradantrieb = allrad
 
-    def getAllradamtrieb(self):
+    def getAllradantrieb(self):
         """
         Gibt an, ob ein Allradantrieb vorhanden ist.
         """
@@ -94,7 +94,8 @@ class SUV(Auto):
 suv1 = SUV("Mercedes Benz", "M63 AMG", 2017, 42000, True)
 print(suv1.getAllradantrieb())
 print(suv1.getMarke())
-
+auto1 = SUV(input("Marke:"), input("Modell:"), 1999, 12311, True)
+print(auto1.getMarke)
 
 # print(Auto.anzahl)
 # auto1 = Auto("VW", "Golf", 2011, 5000)
