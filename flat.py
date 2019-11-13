@@ -3,6 +3,7 @@ class Flat:
     Generate an object Flat
     """
 
+    anzahl = 0
     def __init__(self, na, st, be, pr):
         """
         initialize a new object Flat
@@ -18,6 +19,8 @@ class Flat:
         self.__Strasse = st
         self.__Betten = be
         self.__Preis = pr
+
+        Flat.anzahl += 1
 
     def getName(self):
         """
@@ -54,4 +57,16 @@ class Flat:
             bestaetigung = input("Soll %d als neuer Preis festgelegt werden?(ja/nein):"%preis_neu)
             if bestaetigung == "ja":
                 self.__Preis = preis_neu
-    
+
+
+wohnung1 = Flat("NiehlerHafen", "Am Niehler Hafen 3", 3, 90)
+wohnung2 = Flat("Bechen", "Heiderjansfelderstr. 35", 4, 120)
+wohnung3 = Flat("Köln", "Freiligrathstr. 12", 2, 400)
+wohnungen = [wohnung1, wohnung2, wohnung3]
+
+print(type(Flat.anzahl))
+for i in range(Flat.anzahl):
+    print("Wohnung", i+1, ":", wohnungen[i].getName(),",", wohnungen[i].getStrasse(), ", Betten:", wohnungen[i].getBetten(), ", Preis pro Übernachtung:", wohnungen[i].getPreis())
+
+
+#print(wohnung1.getPreis())
