@@ -1,4 +1,5 @@
-list = ["name", "alter", "adresse", "handynummer"]
-i = 1
-for x in range(len(list)):
-    print(x, list[x])
+x = eval(input("Bitte eine Zahl eingeben: "))
+if type(x) != type("int"):
+    print("Kein int!")
+else:
+    print(x, "ist eine Zahl!")
