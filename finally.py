@@ -1,15 +1,15 @@
-import sys
-
+class Obj:
+    wert = 4
 
 try:
-    x = int(input("Bitte eine Zahl eingeben durch welche 4 geteilt werden soll:"))
-    print(4/x)
+    objekt = Obj()
+    x = int(input("Wert: "))
+    print("Ergebnis: ", Obj.wert/x)
 except ZeroDivisionError:
-    print("Du kannst nicht durch 0 teilen!")
-except ValueError:
-    print("Du musst ein int eingeben!")
-except:
-    print("Folgender Fehler ist aufgetreten:", sys.exc_info()[0])
+    print("Es ist nicht möglich den Wert durch 0 zu teilen!")
 else:
-    print("Das Ergebnis wurde erfolgreich berechnet!")
-print("Ende!")
+    print("Das Ergebnis wurde erfolgreich berechnet")
+finally:
+    del objekt
+    print("Objekt gelöscht")
+print("Auf Wiedersehen!")
