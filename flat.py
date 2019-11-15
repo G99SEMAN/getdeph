@@ -64,7 +64,7 @@ wohnung2 = Flat("Bechen", "Heiderjansfelderstr. 35", 4, 120)
 wohnung3 = Flat("Köln", "Freiligrathstr. 12", 2, 400)
 wohnungen = [wohnung1, wohnung2, wohnung3]
 
-print(type(Flat.anzahl))
+#print(type(Flat.anzahl))
 for i in range(Flat.anzahl):
     print("Wohnung", i+1, ":", wohnungen[i].getName(),",", wohnungen[i].getStrasse(), ", Betten:", wohnungen[i].getBetten(), ", Preis pro Übernachtung:", wohnungen[i].getPreis())
 
