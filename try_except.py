@@ -9,7 +9,7 @@ except ZeroDivisionError:
 except ValueError:
     print("Du musst ein int eingeben!")
 except:
-    print("Folgender Fehler ist aufgetreten:", sys.exc_info()[0])
+    print("Folgender Fehler ist aufgetreten:", sys.exc_info()[0])               #gibt den Fehler aus, wenn er nicht vorher abgefangen wurde
 else:
     print("Das Ergebnis wurde erfolgreich berechnet!")
 print("Ende!")
