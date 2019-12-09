@@ -72,4 +72,3 @@ class Auto:
         print(liste[i].getModell())
         print(liste[i].getBaujahr())
         print(liste[i].getPreis(), "\n")
-        
