@@ -2,3 +2,15 @@ Audi
 A3
 2007
 14500
+Kia
+Sportage
+2011
+11030
+Ranault
+Clio
+2009
+2000
+VW
+Golf
+2015
+5000
