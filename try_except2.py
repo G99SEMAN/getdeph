@@ -24,10 +24,11 @@
 """
 
 class OddError(Exception):
-    self.Wert = wert
+    def __init__(self, wert):
+        self.Wert = wert
 
 try:
-    wort = input("geben sie ein wort mit einer geraden anzahl an buchstaben ein")
+    wort = input("geben sie ein wort mit einer geraden anzahl an buchstaben ein: ")
     if len(wort) %2 == 1:
         raise OddError(wort)
     mitte = int(len(wort)/2)
@@ -37,6 +38,6 @@ try:
     print("Zweite Hälfte:", teil2)
 
 except OddError as fehler:
-    print("Das Wort", wort, "hat eine ungerade Anzahl an buchstaben.")
+    print('Das Wort "'+wort+'" hat eine ungerade Anzahl an buchstaben.')
 
 print("Auf wiedersehen!")
