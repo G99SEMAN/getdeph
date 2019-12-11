@@ -72,5 +72,3 @@ for i in range(laenge):
     print(liste[i].getModell())
     print(liste[i].getBaujahr())
     print(liste[i].getPreis(), "\n")
-
-print(laenge)
