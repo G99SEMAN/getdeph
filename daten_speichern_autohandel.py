@@ -46,29 +46,31 @@ class Auto:
         """
         ändert den Preis des Autos
         """
-        if abs(self.__Preis - preis_neu) < self.__Preis * 0,05:
+        if abs(self.__Preis - preis_neu) < self.__Preis * 0.05:
             self.__Preis = preis_neu
         else:
             print("Die Abweichung zum vorherigen Preis ist sehr groß.")
-            bestaetigung = input("Soll %d als neuer Preis festgelegt werden= (y/n)", %preis_neu)
+            bestaetigung = input("Soll %d als neuer Preis festgelegt werden= (y/n)" %preis_neu)
             if bestaetigung == "y":
                 self.__Preis = preis_neu
 
-    f = open("dateien/sortiment.txt", "r")
+f = open("dateien/sortiment.txt", "r")
 
-    inhalt = f.readlines()
-    laenge = int(len(inhalt)/5)
-    liste = []
+inhalt = f.readlines()
+laenge = int(len(inhalt)/5)
+liste = []
 
-    for i in range(laenge):
-        marke = inhalt[i*5]
-        modell = inhalt[i*5+1]
-        baujahr = inhalt[i*5+2]
-        preis = inhalt[i*5+3]
-        liste += [Auto(marke, modell, baujahr, preis)]
+for i in range(laenge):
+    marke = inhalt[i*5]
+    modell = inhalt[i*5+1]
+    baujahr = inhalt[i*5+2]
+    preis = inhalt[i*5+3]
+    liste += [Auto(marke, modell, baujahr, preis)]
 
-    for i in range(laenge):
-        print(liste[i].getMarke())
-        print(liste[i].getModell())
-        print(liste[i].getBaujahr())
-        print(liste[i].getPreis(), "\n")
+for i in range(laenge):
+    print(liste[i].getMarke())
+    print(liste[i].getModell())
+    print(liste[i].getBaujahr())
+    print(liste[i].getPreis(), "\n")
+
+print(laenge)
