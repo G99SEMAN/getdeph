@@ -41,3 +41,4 @@ except OddError as fehler:
     print('Das Wort "'+wort+'" hat eine ungerade Anzahl an buchstaben.')
 
 print("Auf wiedersehen!")
+print("hello world")
