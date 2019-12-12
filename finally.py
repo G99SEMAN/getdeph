@@ -13,3 +13,4 @@ finally:
     del objekt
     print("Objekt gelöscht")
 print("Auf Wiedersehen!")
+print("Hello World")
