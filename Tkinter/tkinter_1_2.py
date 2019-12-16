@@ -1,24 +1,46 @@
 from tkinter import *
 
 class MyButton(Button):
-    def aktion(self):
-        print("Sie haben den Button gedrückt")
+    def aktion1(self):
+        name = eingabe.get()
+        print(name)
+        eingabe.delete(0, "end")
+    def aktion2(self):
+        print(var.get())
 
 fenster = Tk()
 
 fenster.geometry("300x100")
 fenster.title("Python Kurs")
-rahmen = Frame(fenster, relief="ridge", borderwidth=3)
+rahmen = Frame(fenster, relief="ridge", borderwidth=5)
 rahmen.pack(fill="both", expand=1)
 
-button = Button(rahmen,width=10, text="OK", command=fenster.destroy)
-button.place(x=40, y=60)
-button2 = MyButton(rahmen, width=10, text="Action!")
-button2["command"] = button2.aktion
-button2.grid(row=2, column=1)
+label = Label(rahmen, text="Geben Sie Ihren Namen ein:")
+label.pack()
 
-label = Label(rahmen, text="Wilkommenzum Python Kurs!")
-label.place(x=600, y=20)
+eingabe = Entry(rahmen, bd=2, width=22)
+eingabe.pack()
 
+button = MyButton(rahmen, text="Eingabe")
+button["command"] = button.aktion1
+button.pack()
+
+var = IntVar()
+checkbutton = Checkbutton(rahmen, text="Bestätigen", variable=var)
+checkbutton.pack()
+
+button2 = MyButton(rahmen, text="Eingabe")
+button2["command"] = button.aktion2
+button2.pack()
+
+scrollbar = Scrollbar(rahmen)
+
+liste = Listbox(rahmen, yscrollcommand=scrollbar.set)
+for i in range(50):
+    liste.insert(END, "Zeile " + str(i))
+
+scrollbar.config(command=liste.yview)
+liste.pack(side="left")
+scrollbar.pack(side="left", fill="y")
 
 fenster.mainloop()
