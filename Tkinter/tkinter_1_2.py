@@ -10,7 +10,7 @@ class MyButton(Button):
 
 fenster = Tk()
 
-fenster.geometry("300x100")
+fenster.geometry("300x600")
 fenster.title("Python Kurs")
 rahmen = Frame(fenster, relief="ridge", borderwidth=5)
 rahmen.pack(fill="both", expand=1)
