@@ -9,6 +9,17 @@ class MyButton(Button):
         eingabe2.delete(0, "end")
         ausgabe.insert(0, zahl1+zahl2)
 
+class MyButton2(Button):
+    def aktion(self):
+        if var.get() == 1:
+            fenster2 = Tk()
+            fenster2.geometry("200x200")
+            fenster2.title("Hinweis")
+            label=Label(fenster2, text="Checkbox ist ausgewählt!")
+            label.pack(fill="both", expand=1)
+    def aktion2(self):
+        print(var.get())
+
 
 fenster = Tk()
 
@@ -33,5 +44,12 @@ button.grid(row=3, column=2, pady=20)
 
 ausgabe = Entry(rahmen, bd=2, width=22)
 ausgabe.grid(row=4, column=2, pady=20)
+
+var = IntVar()
+checkbutton = Checkbutton(rahmen, text="Bestätigen", variable=var)
+checkbutton.grid(row=5, column=1)
+button2 = MyButton2(rahmen, text="Eingabe")
+button2["command"] = button2.aktion
+button2.grid(row=5, column=2)
 
 fenster.mainloop()
