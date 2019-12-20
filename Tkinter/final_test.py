@@ -1,4 +1,5 @@
 from tkinter import *
+from anzeigen import *
 
 fenster = Tk()
 
@@ -8,9 +9,9 @@ fenster.title("Sortiment Verwalten")
 rahmen = Frame(fenster, relief="ridge", borderwidth=3)
 rahmen.pack(fill="both", expand=1)
 
-button1 = Button(rahmen, text="Sortiment anzeigen", width=20, height=5)
+button1 = Anzeigen(rahmen, text="Sortiment anzeigen", width=20, height=5)
 button1.config(font=("Arial", 12, "bold"))
-#button1["command"] = button1.anzeigen
+button1["command"] = button1.anzeigen
 button1.place(x=50, y=50)
 
 button2 = Button(rahmen, text="Fahrzeug hinzufügen", width=20, height=5)
