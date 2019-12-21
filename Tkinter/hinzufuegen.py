@@ -3,6 +3,30 @@ from tkinter import *
 
 class Hinzufuegen(Button):
     def hinzufuegen(self):
+        class MyButton(Button):
+            def aktion1(self):
+                f = open("sortiment.txt", "a")
+                inhalt = eingabe1.get()
+                f.write(inhalt + "\n")
+
+                inhalt = eingabe2.get()
+                f.write(inhalt + "\n")
+
+                inhalt = eingabe3.get()
+                f.write(inhalt + "\n")
+
+                inhalt = eingabe4.get()
+                f.write(inhalt + "\n")
+
+                inhalt = eingabe5.get()
+                f.write(inhalt + "\n")
+
+                f.write("\n")
+
+                f.close()
+
+                fenster.destroy()
+
         fenster = Tk()
         fenster.geometry("550x400")
         fenster.title("Fahrzeug hinzufügen")
@@ -21,7 +45,7 @@ class Hinzufuegen(Button):
         label2 = Label(rahmen, text="Marke:")
         label2.place(x=100, y=140)
         eingabe2 = Entry(rahmen, bd=2, width=22)
-        eingabe2.place(x=200, y=100)
+        eingabe2.place(x=200, y=140)
 
         label3 = Label(rahmen, text="Model:")
         label3.place(x=100, y=180)
@@ -36,9 +60,10 @@ class Hinzufuegen(Button):
         label5 = Label(rahmen, text="Preis:")
         label5.place(x=100, y=260)
         eingabe5 = Entry(rahmen, bd=2, width=22)
-        eingabe5.place(x=180, y=320)
+        eingabe5.place(x=200, y=260)
 
-        button = Button(rahmen, text="Eingabe")
+        button = MyButton(rahmen, text="Eingabe")
         button["command"] = button.aktion1
         button.place(x=180, y=320)
-        fenster.mainloo()
+
+        fenster.mainloop()
